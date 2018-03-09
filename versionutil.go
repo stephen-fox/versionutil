@@ -50,6 +50,11 @@ func (v Version) BuildToString() string {
 	return ""
 }
 
+// IsSet returns true if the version has actually been set.
+func (v Version) IsSet() bool {
+	return v.Major > 0 || v.Minor > 0 || v.Patch > 0 || v.Build > 0
+}
+
 // StringToVersion converts a version string (or a string containing a
 // version) to a Version.
 func StringToVersion(str string) (Version, error) {

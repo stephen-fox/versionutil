@@ -34,5 +34,6 @@ func main() {
 		fmt.Println("Long:", version.Long())
 		fmt.Println("Short:", version.Short())
 		fmt.Println("Has build:", version.HasBuild)
+		fmt.Println("Is set:", version.IsSet())
 	}
 }
