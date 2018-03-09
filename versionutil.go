@@ -10,7 +10,6 @@ import (
 
 const (
 	ErrorCouldNotFindVersion  = "Failed to find a version number in the filename"
-	ErrorVersionStringInvalid = "The specified version string is invalid"
 )
 
 /*
@@ -57,7 +56,7 @@ func StringToVersion(str string) (Version, error) {
 	str = path.Base(str)
 
 	if !strings.Contains(str, ".") {
-		return Version{}, errors.New(ErrorVersionStringInvalid)
+		return Version{}, errors.New(ErrorCouldNotFindVersion)
 	}
 
 	replacement := "-"
