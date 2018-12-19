@@ -12,9 +12,7 @@ const (
 	ErrorCouldNotFindVersion  = "Failed to find a version number in the filename"
 )
 
-/*
-Version represents an artifact's version.
-*/
+// Version represents an artifact's version.
 type Version struct {
 	HasBuild    bool
 	Major       int
